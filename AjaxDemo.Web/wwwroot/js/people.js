@@ -28,7 +28,7 @@
 
     $("tbody").on('click', ".edit", function () {
         const row = $(this).closest("tr");
-        
+
         const id = row.data("id");
         const firstName = row.find(".first-name").text();
         const lastName = row.find(".last-name").text();
@@ -69,7 +69,7 @@
             refreshPeople();
         })
     })
-
+    //use data-attributes for edit/delete
     function refreshPeople(cb) {
         $("tbody tr:gt(0)").remove();
         $("#spinner-row").show();
